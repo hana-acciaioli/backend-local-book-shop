@@ -21,9 +21,9 @@ describe('books routes', () => {
     const belovedDetails = res.body;
     expect(belovedDetails).toHaveProperty('title', 'Beloved');
     expect(belovedDetails).toHaveProperty('released', 1987);
-    // expect(belovedDetails.authors[0]).toHaveProperty('name');
-    // expect(belovedDetails.authors[0]).toHaveProperty('id');
-    // expect(belovedDetails.authors[0]).toHaveProperty('dob');
+    expect(belovedDetails.authors[0]).toHaveProperty('name');
+    expect(belovedDetails.authors[0]).toHaveProperty('id');
+    expect(belovedDetails.authors[0]).toHaveProperty('dob');
   });
 });
 
