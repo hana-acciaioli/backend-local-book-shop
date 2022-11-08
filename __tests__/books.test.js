@@ -12,7 +12,7 @@ describe('books routes', () => {
     expect(res.body.length).toEqual(10);
     const beloved = res.body.find((char) => char.id === '1');
     expect(beloved).toHaveProperty('title', 'Beloved');
-    expect(beloved).toHaveProperty('released', '1987');
+    expect(beloved).toHaveProperty('released', 1987);
   });
   afterAll(() => {
     pool.end();

@@ -1,7 +1,7 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
-DROP TABLE IF EXISTS authors;
-DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS authors CASCADE;
+DROP TABLE IF EXISTS books CASCADE;
 DROP TABLE IF EXISTS authors_and_books;
 
 CREATE TABLE authors (
