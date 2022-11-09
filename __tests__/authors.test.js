@@ -19,8 +19,7 @@ describe('authors routes', () => {
     const res = await request(app).get('/authors/1');
     const morrisonDetails = res.body;
     expect(morrisonDetails).toHaveProperty('name', 'Toni Morrison');
-    expect(morrisonDetails).toHaveProperty('dob', '1931-02-18T08:00:00.000Z');
-    expect(morrisonDetails.books[0]).toHaveProperty('title');
+    expect(morrisonDetails).toHaveProperty('dob');
     expect(morrisonDetails.books[0]).toHaveProperty('released');
     expect(morrisonDetails.books[0]).toHaveProperty('id');
   });
