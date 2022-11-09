@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS authors_and_books;
 CREATE TABLE authors (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR NOT NULL,
-    dob INT,
+    dob DATE,
     pob VARCHAR
 
 );
@@ -32,11 +32,11 @@ INSERT INTO authors(
     pob
 )
 VALUES
-('Toni Morrison', 1931-02-18, 'Lorain Ohio' ),
-('Hermann Hesse', 1877-07-02, 'calw Germany'),
-('Alice Walker', 1944-02-09, 'Eatonton GA'),
-('Allison Larkin', 1963-04-28, 'England' ),
-('Frank Herbert', 1920-10-08, 'Tacoma Washington');
+('Toni Morrison', '1931-02-18', 'Lorain Ohio' ),
+('Hermann Hesse', '1877-07-02', 'calw Germany'),
+('Alice Walker', '1944-02-09', 'Eatonton GA'),
+('Allison Larkin', '1963-04-28', 'England' ),
+('Frank Herbert', '1920-10-08', 'Tacoma Washington');
 
 INSERT INTO books(
     title,
